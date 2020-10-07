@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <title>change money</title>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <table>
+          <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+          </tr>
+          <tr>
+            <td><input type="number" name="amount" id="amount" /></td>
+            <td>
+              <select name="from" id="from">
+                <option value="vietnam">vietnam</option>
+                <option value="USD">USD</option>
+                <option value="Euro">Euro</option>
+              </select>
+            </td>
+            <td>
+              <select name="to" id="to">
+                <option value="vietnam">vietnam</option>
+                <option value="USD">USD</option>
+                <option value="Euro">Euro</option>
+              </select>
+            </td>
+            <td><button type="button" onclick="convert()">Convert</button></td>
+          </tr>
+          <tr>
+            <td id="result">Kết quả:</td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <script src="change.js"></script>
+  </body>
+</html>
