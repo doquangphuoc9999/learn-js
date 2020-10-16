@@ -1,0 +1,23 @@
+img {
+  width: 300px;
+}
+button {
+  width: 110px;
+  padding: 6px;
+}
+/* .group-image {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  height: 350px;
+}
+.group-image img {
+  position: absolute;
+  left: 0;
+  transition: left 1s ease-in-out;
+  -webkit-transition: left 1s ease-in-out;
+}
+
+.group-image img.chang-right {
+  left: 50%;
+} */
