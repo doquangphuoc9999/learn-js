@@ -15,15 +15,17 @@
         let yes = document.getElementById("yes");
         let no = document.getElementById("no");
 
-       function randomPos(max){
-        return Math.max((Math.floor(Math.random() * max) - 500), 0) + "px"
+        function random(max){
+            return Math.max((Math.floor(Math.random() * max)- 500),0 ) + "px";
        }
-       function showYes(){
-        alert("<3")
-       }
+
+        function showYes(){
+            alert("<3");
+        }
+       
        function moveImg(){
-        no.style.left = randomPos(window.innerWidth);
-        no.style.top = randomPos(window.innerHeight);   
+           no.style.left = random(window.innerWidth);
+           no.style.top = random(window.innerHeight);
        }
     </script>
 </body>
