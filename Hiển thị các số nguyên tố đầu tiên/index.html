@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Số Nguyên Tố</title>
+  </head>
+  <body>
+    <script>
+      let number = parseInt(prompt("Số lượng số nguyên tố cần in ra"));
+    
+      let count = 0;
+      let num = 2;
+      
+      while(count < number){
+          let check_prime = true;
+
+            for(i = 2; i < num; i++){
+                if(num % i == 0){
+                    check_prime = false;
+                    break;
+                }
+            }
+
+        if(check_prime){
+            document.write("Dãy các số nguyên tố được in ra là: " + num  + "<br/>");
+            count++;
+        }
+        num++;
+      }
+    </script>
+  </body>
+</html>
