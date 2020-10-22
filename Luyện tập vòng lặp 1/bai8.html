@@ -13,16 +13,19 @@
         let num = Math.floor(Math.random() * play);
 
         let isWin = false;
-
-        console.log(num);
-
+        // 10
         while (!isWin) {
+          // !false = true
+          // !false = true
+          // !true = false
           let guess = parseInt(prompt("Số bạn muốn đoán là: "));
+          // 3
+          // 10
           if (num === guess) {
             alert("Chúc mừng bạn");
             isWin = true;
           } else {
-            if (play > guess) {
+            if (guess > num) {
               alert("Kết quả của bạn lớn hơn: chơi lại đi");
             } else {
               alert("Kết quả của bạn bé hơn: chơi lại đi");
