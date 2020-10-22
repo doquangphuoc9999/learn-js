@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 8</title>
+  </head>
+  <body>
+    <button id="play" type="button" onclick="star()">chơi</button>
+    <script>
+      function star() {
+        let play = parseInt(prompt("Lựa chọn khoảng bạn muốn đoán: "));
+        let num = Math.floor(Math.random() * play);
+
+        let isWin = false;
+
+        console.log(num);
+
+        while (!isWin) {
+          let guess = parseInt(prompt("Số bạn muốn đoán là: "));
+          if (num === guess) {
+            alert("Chúc mừng bạn");
+            isWin = true;
+          } else {
+            if (play > guess) {
+              alert("Kết quả của bạn lớn hơn: chơi lại đi");
+            } else {
+              alert("Kết quả của bạn bé hơn: chơi lại đi");
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
