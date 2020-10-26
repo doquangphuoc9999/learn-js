@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Từ điển</title>
+  </head>
+  <body>
+    <input id="input_1" class="ip-1" type="text" />
+    <input class="ip_2" id="ip_2" type="submit" onclick="search()" value="Search" ></input>
+    <p id="result">Kết quả: </p>
+    <script>
+        let input = document.getElementById("input_1");
+        let result = document.getElementById("result");
+        let el = [
+            "Spring","Summer","Autumn","Winter"
+        ];
+        let vn = [
+            "Mùa Xuân", "Mùa hạ", "Mùa thu", "Mùa đông"
+        ];
+
+        function search(){
+            // event.prevenDefault();
+            for(i = 0; i < el.length ; i++){
+                if(input_1.value == el[i]){
+                    result.innerHTML = vn[i];
+                    break;          
+                }
+                else{
+                    result.innerHTML = "Kết quả bạn nhập không phù hợp.";
+                }
+            }
+        }
+
+
+addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+   
+    search();
+  }
+});
+    </script>
+  </body>
+</html>
