@@ -19,7 +19,9 @@
       let b = document.getElementById("carogame");
       let board = [];
       let data = "";
+      let nguoichoi = "";
 
+      //Tạo khung cho BảngBảng
       for (let i = 0; i < 3; i++) {
         board[i] = new Array(".", ".", ".");
       }
@@ -36,8 +38,7 @@
         let player1 = prompt("Nhập X: ");
         let player2 = prompt("Nhập Y: ");
         data = "";
-        board[player1][player2] = "x";
-
+        board[player1][player2] = nguoichoi;
         for (let i = 0; i < 3; i++) {
           data += "<br/>";
           for (let j = 0; j < 3; j++) {
@@ -48,15 +49,13 @@
           "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>";
         b.innerHTML = data;
         b.innerHTML = "<hr>" + data;
-        display_input();
+        lanluot();
       }
-      function display_input() {
-        if (player1 == 1) {
-          document.getElementById().innerHTML = "X";
-          player1 = 0;
+      function lanluot() {
+        if (nguoichoi == "X") {
+          nguoichoi = "O";
         } else {
-          document.getElementById().innerHTML = "O";
-          player1 = 1;
+          nguoichoi = "X";
         }
       }
     </script>

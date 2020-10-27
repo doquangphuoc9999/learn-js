@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      for (let i = 1; i < 20; i++) {
+        document.write(i == 2 || i == 3 || i == 5 || i == 6 ? "*" : "&nbsp;");
+      }
+      document.write("<br>");
+      for (let i = 1; i < 20; i++) {
+        document.write(i == 1 || i == 7 || i == 4 ? "*" : "&nbsp;");
+      }
+      document.write("<br>");
+      for (let i = 1; i < 20; i++) {
+        document.write(i == 1 || i == 7 ? "*" : "&nbsp;");
+      }
+      document.write("<br>");
+      for (let i = 1; i < 20; i++) {
+        document.write(i == 2 || i == 6 ? "*" : "&nbsp;");
+      }
+      document.write("<br>");
+      for (let i = 1; i < 20; i++) {
+        document.write(i == 3 || i == 5 ? "*" : "&nbsp;");
+      }
+      document.write("<br>");
+      for (let i = 1; i < 20; i++) {
+        document.write(i == 4 ? "*" : "&nbsp;");
+      }
+      document.write("<br>");
+    </script>
+  </body>
+</html>
+<!-- 
+let thisSymbol;
+if (i === 0 || i === 19) {
+    thisSymbol = "*" 
+}else {
+    thisSymbol = " " 
+} -->
