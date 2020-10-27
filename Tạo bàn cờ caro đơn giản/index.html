@@ -33,6 +33,7 @@
         let positionY = prompt("Y: ");
         data = "";
         board[positionX][positionY] = "x";
+        board[positionY][positionX] = "O";
         for (let i = 0; i < 5; i++) {
           data += "<br/>";
           for (let j = 0; j < 5; j++) {
