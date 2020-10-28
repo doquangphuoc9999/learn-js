@@ -19,7 +19,7 @@
       let b = document.getElementById("carogame");
       let board = [];
       let data = "";
-      let nguoichoi = "";
+      let nguoichoi = "X";
 
       //Tạo khung cho BảngBảng
       for (let i = 0; i < 3; i++) {
@@ -48,7 +48,7 @@
         data +=
           "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>";
         b.innerHTML = data;
-        b.innerHTML = "<hr>" + data;
+
         lanluot();
       }
       function lanluot() {
