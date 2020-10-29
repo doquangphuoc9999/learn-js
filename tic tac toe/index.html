@@ -3,61 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      body {
-        text-align: center;
-      }
-    </style>
+    <title>Tic Toc Toe</title>
   </head>
   <body>
-    <h2>Caro Game Simple</h2>
-    <p id="carogame"></p>
-    <!-- <input type="button" value="Change value" onclick="changeValue()" /> -->
+    <div>
+      <h2>Caro game</h2>
+      <div id="caro_game"></div>
+      <button onclick="changeButton()">Play</button>
 
-    <script>
-      let b = document.getElementById("carogame");
-      let board = [];
-      let data = "";
-      let nguoichoi = "X";
+      <script>
+        let game = document.getElementById("caro_game");
+        let board = [];
 
-      //Tạo khung cho BảngBảng
-      for (let i = 0; i < 3; i++) {
-        board[i] = new Array(".", ".", ".");
-      }
-      for (let i = 0; i < 3; i++) {
-        data += "<br/>";
-        for (let j = 0; j < 3; j++) {
-          data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-        }
-      }
-      data +=
-        "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>";
-      b.innerHTML = data;
-      function changeValue() {
-        let player1 = prompt("Nhập X: ");
-        let player2 = prompt("Nhập Y: ");
-        data = "";
-        board[player1][player2] = nguoichoi;
         for (let i = 0; i < 3; i++) {
-          data += "<br/>";
-          for (let j = 0; j < 3; j++) {
-            data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+          board[i] = [".", ".", "."];
+        }
+
+        function printBoard() {
+          let data = "";
+          for (let i = 0; i < 3; i++) {
+            data += "<br/>";
+            for (let j = 0; j < 3; j++) {
+              data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+          }
+          game.innerHTML = data;
+        }
+        printBoard();
+
+        let player = "X";
+        function changeButton() {
+          let i = prompt("X: ");
+          let j = prompt("Y:");
+
+          board[i][j] = player;
+          printBoard();
+          if (check()) {
+            return alert(player + "  win");
+          }
+          lanluot();
+        }
+
+        function lanluot() {
+          if (player === "X") {
+            player = "O";
+          } else {
+            player = "X";
           }
         }
-        data +=
-          "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>";
-        b.innerHTML = data;
-
-        lanluot();
-      }
-      function lanluot() {
-        if (nguoichoi == "X") {
-          nguoichoi = "O";
-        } else {
-          nguoichoi = "X";
+        function check3cell(cell1, cell2, cell3) {
+          return cell1 !== "." && cell1 === cell2 && cell1 === cell3;
         }
-      }
-    </script>
+        function check() {
+          for (let i = 0; i < 3; i++) {
+            if (check3cell(board[i][0], board[i][1], board[i][2])) {
+              return true;
+            }
+            if (check3cell(board[0][i], board[1][i], board[2][i])) {
+              return true;
+            }
+          }
+          if (check3cell(board[0][0], board[1][1], board[2][2])) {
+            return true;
+          }
+          if (check3cell(board[0][2], board[1][1], board[2][0])) {
+            return true;
+          }
+        }
+      </script>
+    </div>
   </body>
 </html>

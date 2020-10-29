@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bài 5</title>
+  </head>
+  <body>
+    <script>
+      let a = prompt("Nhập điểm kiếm tra: ");
+      let b = prompt("Nhập điểm giữa kỳ: ");
+      let c = prompt("Nhập điểm cuối kỳ: ");
+
+      if ((a + b + c) / 3 >= 8) {
+        alert("Học Sinh Giỏi");
+      }
+      if ((a + b + c) / 3 >= 7) {
+        alert("Học Sinh khá");
+      }
+      if ((a + b + c) / 3 >= 5) {
+        alert("Học Sinh Trung Bình");
+      }
+      if ((a + b + c) / 3 >= 0) {
+        alert("Học Sinh yếu");
+      } else {
+        alert("Điểm của bạn vừa nhập không hợp lệ");
+      }
+    </script>
+  </body>
+</html>
