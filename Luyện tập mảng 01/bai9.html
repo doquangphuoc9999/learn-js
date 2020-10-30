@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = [];
+      for (let i = 0; i < 10; i++) {
+        let text = parseInt(prompt("Nhập mãng số nguyên a: "));
+        a.push(text);
+      }
+      let b = [];
+      for (let j = 0; j < 10; j++) {
+        let input = parseInt(prompt("Nhập mãng số nguyên b: "));
+        a.push(input);
+      }
+      let c = a.concat(b);
+      document.write(c.toString());
+    </script>
+  </body>
+</html>

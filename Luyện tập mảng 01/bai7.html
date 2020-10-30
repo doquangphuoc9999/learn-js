@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 7</title>
+  </head>
+  <body>
+    <script>
+      let a = [];
+      for (let i = 0; i < 10; i++) {
+        let text = parseInt(prompt("Nhập mãng số nguyên: "));
+        a.push(text);
+      }
+
+      let V = parseInt(prompt("Nhập số nguyên: "));
+      // a = [0, 1, 2, 3, 4, 5, 6, 7, 9, 0] v= 8
+      for (let j = 0; j < a.length; j++) {
+        if (V === a[j]) {
+          // 8      a[8]
+          a.splice(j, 1);
+          a.push(0);
+          break;
+        }
+      }
+
+      document.write(a.toString());
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 5</title>
+  </head>
+  <body>
+    <script>
+      let count = 0;
+      let a = [-1, 1, -1.5, 0, -2, 5];
+
+      for (let i = 0; i < a.length; i++) {
+        if (Number.isInteger(a[i]) && a[i] < 0) {
+          count++;
+        }
+      }
+      document.write("Các số nguyên âm trong một chuổi là: " + count);
+    </script>
+  </body>
+</html>
