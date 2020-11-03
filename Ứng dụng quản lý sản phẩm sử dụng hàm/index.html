@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="product.css" />
+    <title>Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Add New Product</h3>
+      <div class="form">
+        <input type="text" placeholder="Add New product" id="productName" />
+        <a href="script:" onclick="addProduct()">Add</a>
+      </div>
+      <div class="list-produc">
+        <div class="containet">
+          <h3>Display All Product</h3>
+          <table>
+            <thead class="thead-dark">
+              <tr>
+                <th>Product Name</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="tbProducts"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="product.js"></script>
+  </body>
+</html>
