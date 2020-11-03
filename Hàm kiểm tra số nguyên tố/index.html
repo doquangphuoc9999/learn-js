@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hàm kiểm tra số nguyên tố</title>
+  </head>
+  <body>
+    <script>
+      let count = 0;
+      function CheckIsPrime(number) {
+        if (number === 2) return true;
+        for (let i = 2; i < number; i++) {
+          if (number % i == 0) {
+            return false;
+          }
+          return true;
+          //   count++;
+        }
+      }
+      for (let j = 2; j < 10000; j++) {
+        if (CheckIsPrime(j)) {
+          document.write(j + "<br/>");
+        }
+      }
+    </script>
+  </body>
+</html>
