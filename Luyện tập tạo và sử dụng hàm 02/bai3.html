@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num = parseInt(prompt("Nhập num: "));
+      count = 1;
+      function calculated() {
+        for (let i = 1; i <= num; i++) {
+          count = count * i;
+        }
+        document.write("Giai thừa của " + num + " là:" + count);
+      }
+      calculated();
+    </script>
+  </body>
+</html>
