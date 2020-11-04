@@ -7,19 +7,19 @@
   </head>
   <body>
     <script>
-      let count = 0;
-      function CheckIsPrime(number) {
-        if (number === 2) return true;
+      function checkIsPrime(number) {
+        if (number === 2) {
+          return true;
+        }
         for (let i = 2; i < number; i++) {
-          if (number % i == 0) {
+          if (number % i === 0) {
             return false;
           }
-          return true;
-          //   count++;
         }
+        return true;
       }
       for (let j = 2; j < 10000; j++) {
-        if (CheckIsPrime(j)) {
+        if (checkIsPrime(j)) {
           document.write(j + "<br/>");
         }
       }
