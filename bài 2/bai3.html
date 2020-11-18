@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 3</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="300px" height="300px" style="border: 1px solid">
+    </canvas>
+    <script>
+      let canvas = document.getElementById("canvas");
+      function Circle(x, y, radius, color) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.color = color;
+        this.render = function (canvas) {
+          const ctx = canvas.getContext("2d");
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+          ctx.strokeStyle = this.color;
+          ctx.stroke();
+          //   ctx.fillRect(this.x, this.y, this.radius, this.color);
+        };
+      }
+      let circle = new Circle(40, 50, 30, "#FF3300");
+      circle.render(canvas);
+    </script>
+  </body>
+</html>
